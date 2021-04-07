@@ -37,7 +37,7 @@ def admin_only(view_func):
         if group == 'admin':
             return view_func(request, *args, **kwargs)
         
-        else:
-            return HttpResponse('You are not allowed')
+        # else:
+        #     return HttpResponse('You are not allowed')
 
     return wrapper_function
